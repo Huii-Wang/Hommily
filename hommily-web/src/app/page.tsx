@@ -1,65 +1,93 @@
+'use client';
+
+import { useLanguage } from '@/contexts/LanguageContext';
+
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-6 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            欢迎来到 Hommily
+    <div className="pt-16">
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-white">
+        <div className="text-center px-6">
+          <h1 className="text-5xl md:text-7xl font-semibold tracking-tight text-black mb-6">
+            {t('home.hero.title')}
           </h1>
-          <p className="text-xl text-gray-600">
-            打造温馨家居，创造美好生活
+          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
+            {t('home.hero.subtitle')}
+          </p>
+          <button className="bg-black text-white px-12 py-3 text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors">
+            {t('home.hero.cta')}
+          </button>
+        </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-32 px-6 max-w-4xl mx-auto">
+        <h2 className="text-4xl font-semibold tracking-tight text-black mb-12 text-center">
+          {t('home.about.title')}
+        </h2>
+        <div className="space-y-8 text-lg text-gray-600 leading-relaxed">
+          <p className="text-center">
+            {t('home.about.desc1')}
+          </p>
+          <p className="text-center">
+            {t('home.about.desc2')}
           </p>
         </div>
+      </section>
 
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">
-            公司简介
-          </h2>
-          <div className="space-y-4 text-gray-600 leading-relaxed">
-            <p>
-              Hommily 致力于为全球家庭提供高品质的家居产品和解决方案。我们相信，每个家庭都值得拥有温馨、舒适的生活空间。
-            </p>
-            <p>
-              自成立以来，我们始终坚持以客户需求为导向，不断创新和完善产品线，为客户提供从设计到实施的一站式家居服务。
-            </p>
-            <p>
-              我们的团队由经验丰富的设计师和工程师组成，他们将现代美学与实用功能完美结合，为每一位客户打造独特的家居环境。
-            </p>
+      {/* Values Section */}
+      <section className="py-32 px-6 bg-black text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-16">
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold mb-4">
+                {t('home.values.mission')}
+              </h3>
+              <p className="text-gray-400">
+                {t('home.values.missionDesc')}
+              </p>
+            </div>
+
+            <div className="text-center border-l border-r border-gray-800">
+              <h3 className="text-2xl font-semibold mb-4">
+                {t('home.values.vision')}
+              </h3>
+              <p className="text-gray-400">
+                {t('home.values.visionDesc')}
+              </p>
+            </div>
+
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold mb-4">
+                {t('home.values.value')}
+              </h3>
+              <p className="text-gray-400">
+                {t('home.values.valueDesc')}
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white rounded-lg shadow-md p-6 text-center">
-            <div className="text-4xl text-blue-600 mb-4">🎯</div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              我们的使命
-            </h3>
-            <p className="text-gray-600">
-              为每个家庭创造温馨舒适的生活空间
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6 text-center">
-            <div className="text-4xl text-blue-600 mb-4">👁️</div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              我们的愿景
-            </h3>
-            <p className="text-gray-600">
-              成为全球领先的家居品牌
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6 text-center">
-            <div className="text-4xl text-blue-600 mb-4">💡</div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              核心价值
-            </h3>
-            <p className="text-gray-600">
-              品质、创新、服务至上
-            </p>
-          </div>
-        </div>
-      </div>
+      {/* CTA Section */}
+      <section className="py-32 px-6 text-center">
+        <h2 className="text-4xl font-semibold tracking-tight text-black mb-6">
+          {t('home.cta.title')}
+        </h2>
+        <p className="text-xl text-gray-600 mb-12">
+          {t('home.cta.subtitle')}
+        </p>
+        <button className="bg-black text-white px-12 py-3 text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors">
+          {t('home.cta.button')}
+        </button>
+      </section>
     </div>
   );
 }
