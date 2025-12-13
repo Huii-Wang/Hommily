@@ -39,7 +39,7 @@ const translations = {
   nav: {
     home: '首页',
     products: '产品',
-    brand: 'HOMMILY',
+    brand: 'Hommily',
     about: '关于我们',
   },
   home: {

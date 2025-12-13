@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-center gap-16">
           <Link href="/" className="absolute left-6 text-xl font-semibold tracking-tight text-black hover:text-gray-600 transition-colors">
-            HOMMILY
+            Hommily
           </Link>
 
           <div className="flex items-center gap-8">
