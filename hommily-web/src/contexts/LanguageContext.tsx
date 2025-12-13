@@ -88,7 +88,7 @@ const translations = {
     },
     products: {
       title: '产品系列',
-      subtitle: '精选优质家居产品',
+      subtitle: '品质生活好物',
       category: {
         humidifier: '加湿器',
         umbrella: '雨伞',
@@ -120,8 +120,8 @@ const translations = {
         },
       },
       learnMore: '了解更多',
-      customTitle: '需要定制产品？',
-      customDesc: '我们提供专业的定制服务，满足您的个性化需求',
+      customTitle: '用心设计，守护日常',
+      customDesc: '每一件产品都经过精心打磨，只为给您带来更舒适的生活体验',
       contact: '联系我们',
     },
     brand: {
@@ -245,7 +245,7 @@ const translations = {
     },
     products: {
       title: '製品シリーズ',
-      subtitle: '厳選された高品質家具製品',
+      subtitle: '品質生活の必需品',
       category: {
         humidifier: '加湿器',
         umbrella: '傘',
@@ -277,8 +277,8 @@ const translations = {
         },
       },
       learnMore: '詳細を見る',
-      customTitle: 'カスタム製品が必要ですか？',
-      customDesc: '専門的なカスタムサービスを提供し、お客様の個別ニーズに対応します',
+      customTitle: '心を込めたデザイン、日常を守る',
+      customDesc: 'すべての製品を丁寧に磨き上げ、より快適な生活体験をお届けします',
       contact: 'お問い合わせ',
     },
     brand: {

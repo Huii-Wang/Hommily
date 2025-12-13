@@ -113,12 +113,9 @@ export default function ProductsPage() {
         <h2 className="text-4xl font-semibold mb-6">
           {t('products.customTitle')}
         </h2>
-        <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+        <p className="text-xl text-gray-400 max-w-2xl mx-auto">
           {t('products.customDesc')}
         </p>
-        <button className="bg-white text-black px-12 py-3 text-sm font-medium tracking-wide hover:bg-gray-200 transition-colors">
-          {t('products.contact')}
-        </button>
       </div>
     </div>
   );
