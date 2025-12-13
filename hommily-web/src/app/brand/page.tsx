@@ -35,6 +35,10 @@ export default function BrandPage() {
         </div>
       </section>
 
+
+
+
+
       {/* Brand Values */}
       <section className="py-32 px-6 bg-black text-white">
         <div className="max-w-6xl mx-auto">
@@ -55,49 +59,15 @@ export default function BrandPage() {
               </p>
             </div>
             <div className="border-t border-gray-800 pt-8">
-              <h3 className="text-2xl font-semibold mb-4">{t('brand.values.sustainability')}</h3>
+              <h3 className="text-2xl font-semibold mb-4">{t('brand.values.practical')}</h3>
               <p className="text-gray-400">
-                {t('brand.values.sustainabilityDesc')}
+                {t('brand.values.practicalDesc')}
               </p>
             </div>
             <div className="border-t border-gray-800 pt-8">
-              <h3 className="text-2xl font-semibold mb-4">{t('brand.values.people')}</h3>
+              <h3 className="text-2xl font-semibold mb-4">{t('brand.values.trust')}</h3>
               <p className="text-gray-400">
-                {t('brand.values.peopleDesc')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="py-32 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-16 text-center">
-            <div className="border-t border-gray-200 pt-8">
-              <h3 className="text-5xl font-semibold text-black mb-4">
-                10+
-              </h3>
-              <p className="text-gray-600 tracking-wide">
-                {t('brand.stats.awards')}
-              </p>
-            </div>
-
-            <div className="border-t border-gray-200 pt-8">
-              <h3 className="text-5xl font-semibold text-black mb-4">
-                50+
-              </h3>
-              <p className="text-gray-600 tracking-wide">
-                {t('brand.stats.countries')}
-              </p>
-            </div>
-
-            <div className="border-t border-gray-200 pt-8">
-              <h3 className="text-5xl font-semibold text-black mb-4">
-                100万+
-              </h3>
-              <p className="text-gray-600 tracking-wide">
-                {t('brand.stats.customers')}
+                {t('brand.values.trustDesc')}
               </p>
             </div>
           </div>
