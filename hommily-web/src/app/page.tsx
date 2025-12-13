@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Home() {
@@ -16,9 +17,9 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
             {t('home.hero.subtitle')}
           </p>
-          <button className="bg-black text-white px-12 py-3 text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors">
+          <Link href="/products" className="inline-block bg-black text-white px-12 py-3 text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors">
             {t('home.hero.cta')}
-          </button>
+          </Link>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,9 +85,9 @@ export default function Home() {
         <p className="text-xl text-gray-600 mb-12">
           {t('home.cta.subtitle')}
         </p>
-        <button className="bg-black text-white px-12 py-3 text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors">
+        <Link href="/products" className="inline-block bg-black text-white px-12 py-3 text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors">
           {t('home.cta.button')}
-        </button>
+        </Link>
       </section>
     </div>
   );
