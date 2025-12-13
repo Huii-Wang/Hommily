@@ -17,7 +17,10 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
             {t('home.hero.subtitle')}
           </p>
-          <Link href="/products" className="inline-block bg-black text-white px-12 py-3 text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors">
+          <Link
+            href="/products"
+            className="inline-block px-12 py-3 text-sm font-medium tracking-wide text-white rounded-sm shadow-lg hover:shadow-xl bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900 bg-[length:200%_100%] animate-gradient-x"
+          >
             {t('home.hero.cta')}
           </Link>
         </div>
