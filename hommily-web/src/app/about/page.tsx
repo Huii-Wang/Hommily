@@ -8,14 +8,7 @@ export default function AboutPage() {
   return (
     <div className="pt-16 min-h-screen bg-white">
       {/* Header */}
-      <div className="py-24 px-6 text-center border-b border-gray-100">
-        <h1 className="text-5xl font-semibold tracking-tight text-black mb-4">
-          {t('about.title')}
-        </h1>
-        <p className="text-xl text-gray-600">
-          {t('about.subtitle')}
-        </p>
-      </div>
+
 
       {/* Company Introduction */}
       <section className="py-32 px-6">
