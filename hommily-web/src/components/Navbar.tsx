@@ -17,8 +17,8 @@ export default function Navbar() {
 
   const languages = [
     { code: 'en' as const, label: 'EN' },
-    { code: 'zh' as const, label: '中文' },
     { code: 'ja' as const, label: '日本語' },
+    { code: 'zh' as const, label: '中文' },
   ];
 
   return (
