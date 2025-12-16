@@ -18,23 +18,29 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-black/10">
       <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-center gap-16">
-          <Link href="/" className="absolute left-6 text-xl font-semibold tracking-tight text-black hover:text-black/60 transition-colors">
+        <div className="flex items-center justify-between">
+          <Link 
+            href="/" 
+            className="text-xl font-semibold tracking-tight text-black hover:text-black/60 transition-colors"
+          >
             Hommily
           </Link>
 
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-10">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}
-                className={`text-sm font-medium tracking-wide transition-all duration-200 ${
+                className={`text-sm font-medium tracking-wide transition-all duration-200 relative ${
                   pathname === item.path
                     ? 'text-black'
                     : 'text-black/60 hover:text-black'
                 }`}
               >
                 {item.name}
+                {pathname === item.path && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-black"></span>
+                )}
               </Link>
             ))}
           </div>
