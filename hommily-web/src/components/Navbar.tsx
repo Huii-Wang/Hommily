@@ -6,13 +6,19 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Navbar() {
   const pathname = usePathname();
-  const { t } = useLanguage();
+  const { t, language, setLanguage } = useLanguage();
 
   const navItems = [
     { name: t('nav.home'), path: '/' },
     { name: t('nav.products'), path: '/products' },
     { name: t('nav.brand'), path: '/brand' },
     { name: t('nav.about'), path: '/about' },
+  ];
+
+  const languages = [
+    { code: 'en' as const, label: 'EN' },
+    { code: 'zh' as const, label: '中文' },
+    { code: 'ja' as const, label: '日本語' },
   ];
 
   return (
@@ -43,6 +49,22 @@ export default function Navbar() {
                 )}
               </Link>
             ))}
+            
+            <div className="flex items-center gap-2 ml-4 pl-4 border-l border-black/10">
+              {languages.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => setLanguage(lang.code)}
+                  className={`text-xs font-medium px-2 py-1 rounded transition-all duration-200 ${
+                    language === lang.code
+                      ? 'text-black bg-black/5'
+                      : 'text-black/40 hover:text-black/60'
+                  }`}
+                >
+                  {lang.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

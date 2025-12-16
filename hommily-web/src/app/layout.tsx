@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Serif_SC } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import LanguageSetter from "@/components/LanguageSetter";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const notoSerifSC = Noto_Serif_SC({
@@ -21,9 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="en">
       <body className={`${notoSerifSC.variable} antialiased`}>
         <LanguageProvider>
+          <LanguageSetter />
           <Navbar />
           {children}
         </LanguageProvider>
